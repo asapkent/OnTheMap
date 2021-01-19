@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                 <state key="normal" title="LogIn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C79-oO-zxj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need an account?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NA-cP-42A">
                                 <rect key="frame" x="35" y="519" width="344" height="21.5"/>
@@ -51,6 +54,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign Up"/>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hXE-dc-AL1">
+                                <rect key="frame" x="188.5" y="617" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,6 +70,7 @@
                             <constraint firstItem="2hk-TS-Z6W" firstAttribute="top" secondItem="joE-Dc-h0b" secondAttribute="bottom" constant="25" id="NwC-01-p0J"/>
                             <constraint firstItem="Otd-Sv-igP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Pie-mY-a1F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="joE-Dc-h0b" secondAttribute="trailing" constant="35" id="Qhh-Lc-9C8"/>
+                            <constraint firstItem="hXE-dc-AL1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6a-Ph-ANl"/>
                             <constraint firstItem="Otd-Sv-igP" firstAttribute="top" secondItem="7NA-cP-42A" secondAttribute="bottom" constant="21.5" id="Xl1-Kb-R7B"/>
                             <constraint firstItem="joE-Dc-h0b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="a3E-WL-GgC"/>
                             <constraint firstItem="rxq-5A-Q67" firstAttribute="top" secondItem="2hk-TS-Z6W" secondAttribute="bottom" constant="26" id="czY-4f-VNy"/>
@@ -71,9 +78,17 @@
                             <constraint firstItem="2hk-TS-Z6W" firstAttribute="leading" secondItem="joE-Dc-h0b" secondAttribute="leading" id="nJL-1x-Zm8"/>
                             <constraint firstItem="7NA-cP-42A" firstAttribute="top" secondItem="rxq-5A-Q67" secondAttribute="bottom" constant="21" id="rXF-8G-HDE"/>
                             <constraint firstItem="7NA-cP-42A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="v5s-aX-Egb"/>
+                            <constraint firstItem="hXE-dc-AL1" firstAttribute="top" secondItem="Otd-Sv-igP" secondAttribute="bottom" constant="21" id="wbv-gF-FE3"/>
                             <constraint firstItem="rxq-5A-Q67" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="z5z-aO-ufs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorOutlet" destination="hXE-dc-AL1" id="HR6-yP-CRF"/>
+                        <outlet property="emailTextFieldOutlet" destination="joE-Dc-h0b" id="hJ6-Ba-rM0"/>
+                        <outlet property="loginButtonOutlet" destination="rxq-5A-Q67" id="d9w-gs-VM0"/>
+                        <outlet property="passwordTextFieldOutlet" destination="2hk-TS-Z6W" id="5dk-9G-dUY"/>
+                        <outlet property="singupButtonOutlet" destination="Otd-Sv-igP" id="2OO-p6-qZl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
