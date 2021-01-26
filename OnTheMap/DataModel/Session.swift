@@ -16,7 +16,6 @@ struct Session: Codable {
 
 struct account: Codable {
     let registered: Bool
-    //Account: Key is the UserID
     let key: String
 }
 

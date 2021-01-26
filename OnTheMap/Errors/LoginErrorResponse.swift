@@ -13,7 +13,7 @@ struct LoginErrorResponse: Codable {
     let error: String
 }
 extension LoginErrorResponse: LocalizedError {
-    var errorDescription: Int {
+     var errorDescription: Int {
         return status
     }
 }

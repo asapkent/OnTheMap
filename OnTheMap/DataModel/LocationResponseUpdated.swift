@@ -9,4 +9,8 @@ import Foundation
 
 struct LocationResponseUpdated: Codable {
     let updatedAt: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case updatedAt = "updatedAt"
+    }
 }

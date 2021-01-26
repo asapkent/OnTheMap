@@ -14,7 +14,6 @@ struct UserInfo: Codable {
         case lastName = "last_name"
         case mediaURL = "website_url"
         case uniqueKey = "key"
-
     }
 }
 

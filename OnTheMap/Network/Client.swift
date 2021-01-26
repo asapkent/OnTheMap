@@ -48,7 +48,7 @@ class Client {
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        completion(nil, error as! LoginErrorResponse)
+                        completion(nil, (error as! LoginErrorResponse))
                     }
                 }
             }
