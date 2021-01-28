@@ -21,6 +21,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapViewOutlet.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        handleStudentData()
+    }
+    
     @IBAction func logoutButtonPressed(_ sender: Any) {
         Client.deleteSession { (success, error) in
             if success {
@@ -34,10 +38,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBAction func refreshButtonPressed(_ sender: Any) {
         handleStudentData()
     }
-    
-    @IBAction func addButtonPressed(_ sender: Any) {
-    }
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let reuseId = "pin"
         
@@ -112,4 +113,5 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let predicate = NSPredicate(format:"SELF MATCHES %@", argumentArray:[regEx])
         return predicate.evaluate(with: string)
     }
+    
 }

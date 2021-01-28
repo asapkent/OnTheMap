@@ -64,7 +64,7 @@ class EnterLocationViewController: UIViewController, UITextFieldDelegate {
             } else {
                 if data == nil {
                     locationSearch(false)
-                    showDataFailure(message: " Location no found")
+                    showDataFailure(message: " Location not found")
                 } else if personalLinkTextField.text == ""{
                     showDataFailure(message: "Enter URL")
                 }
