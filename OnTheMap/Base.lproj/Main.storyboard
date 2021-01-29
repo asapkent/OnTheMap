@@ -292,6 +292,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Is-WDw">
+                                <rect key="frame" x="0.0" y="12" width="414" height="818"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzN-yh-ThP">
                                 <rect key="frame" x="86.5" y="689" width="241" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -304,9 +307,6 @@
                                     <action selector="confirmLocationAction:" destination="NVy-A0-lwR" eventType="touchUpInside" id="53G-8Q-QxR"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="taT-Is-WDw">
-                                <rect key="frame" x="0.0" y="12" width="414" height="818"/>
-                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zth-fK-46j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

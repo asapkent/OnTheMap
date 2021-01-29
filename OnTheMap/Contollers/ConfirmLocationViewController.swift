@@ -24,6 +24,7 @@ class ConfirmLocationViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        mapView.showsUserLocation = true
         handleUserLocation(newCoordinates: newLocation)
     }
     
@@ -33,7 +34,6 @@ class ConfirmLocationViewController: UIViewController, MKMapViewDelegate {
                 print(userInfo.userID)
                 print(success)
                 self.navigationController?.dismiss(animated: true, completion: {
-                    
                     return
                 })
             } else {

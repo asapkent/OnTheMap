@@ -74,6 +74,15 @@ class EnterLocationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let detailVC = segue.destination as! ConfirmLocationViewController
+            detailVC.newLocation = self.newCoordinates
+            //            print("PREPARE FOR SEGUE NEW COORDINATES")
+            //            print(self.newCoordinates)
+        }
+    }
+    
     func geocodeAddressString(_ addressString: String,
                               completionHandler: @escaping ([CLPlacemark]?, Error?) -> Void) {
     }
